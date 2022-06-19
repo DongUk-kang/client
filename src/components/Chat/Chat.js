@@ -9,8 +9,7 @@ import Input from '../Input/Input';
 
 import './Chat.css';
 
-// const ENDPOINT = 'http://localhost:8080/';
-const ENDPOINT = 'https://test-chatweb.herokuapp.com/';
+// const ENDPOINT = 'http://localhost:5500/';
 
 let socket;
 
@@ -20,6 +19,8 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const ENDPOINT = 'https://processing-mode.herokuapp.com/';
+
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
